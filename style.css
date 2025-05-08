@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif; /* Changed font for a cleaner look */
+    background-image: url('background.png'); /* Added background image */
+    /* background-color: #e0f7fa; Fallback color, can be kept or removed */
+    color: #00796b; /* Teal text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #004d40; /* Dark teal */
+    font-size: 3em;
+    text-shadow: 2px 2px #88b0b0; /* Adjusted light teal shadow for better contrast */
+}
+
+#tiles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px); /* Adjust tile size and count as needed */
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* White container background */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 121, 107, 0.3); /* Teal shadow */
+}
+
+.tile {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid #00796b; /* Teal border */
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures image stays within rounded borders */
+}
+
+.tile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #004d40; /* Dark teal shadow on hover */
+}
+
+#message-display {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 30px;
+    border: 5px dashed #00796b; /* Dashed teal border */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+#message-display.hidden {
+    display: none;
+}
+
+#message-text {
+    font-size: 1.5em;
+    color: #004d40; /* Dark teal */
+    margin-bottom: 20px;
+}
+
+#close-message {
+    background-color: #00796b; /* Teal */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#close-message:hover {
+    background-color: #004d40; /* Dark teal */
+}
